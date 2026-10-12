@@ -267,7 +267,7 @@ function App() {
   useEffect(() => {
     let isMounted = true
 
-    fetch('/data/cases.json')
+    fetch(`${import.meta.env.BASE_URL}data/cases.json`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to load cases.json')
